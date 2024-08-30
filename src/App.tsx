@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+import { FormProvider } from "./context/FormContext";
+
 import { Menu } from "./components/Menu";
 import { Personal } from "./pages/Personal";
 import { Plan } from "./pages/Plan";
@@ -12,18 +14,20 @@ import "./css/app.css";
 export const App = () => {
   return (
     <main className="app container">
-      <BrowserRouter>
-        <Menu />
-        <figure className="header_img"></figure>
+      <FormProvider>
+        <BrowserRouter>
+          <Menu />
+          <figure className="header_img"></figure>
 
-        <Routes>
-          <Route path="/" element={<Personal />} />
-          <Route path="/plan" element={<Plan />} />
-          <Route path="/addons" element={<Addons />} />
-          <Route path="/summary" element={<Summary />} />
-          <Route path="/thanks" element={<Thanks />} />
-        </Routes>
-      </BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Personal />} />
+            <Route path="/plan" element={<Plan />} />
+            <Route path="/addons" element={<Addons />} />
+            <Route path="/summary" element={<Summary />} />
+            <Route path="/thanks" element={<Thanks />} />
+          </Routes>
+        </BrowserRouter>
+      </FormProvider>
     </main>
   );
 };
