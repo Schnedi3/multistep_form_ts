@@ -1,0 +1,137 @@
+/* FORM */
+.plan_form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.plan > input[type="radio"] {
+  display: none;
+}
+
+.plan > label {
+  padding: 0.9rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+  border: 2px solid var(--light-gray);
+  border-radius: 0.5rem;
+}
+
+.plan > input[type="radio"]:checked ~ label {
+  background-color: var(--magnolia);
+  border: 2px solid var(--pastel-purple);
+}
+
+.plan > label > h4 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--marine-blue);
+}
+
+.plan > label > p {
+  margin-left: auto;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--pastel-purple);
+}
+
+/* MONTHLY-YEARLY */
+.billing {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.6rem;
+  background-color: var(--magnolia);
+  border-radius: 0.5rem;
+}
+
+.slider {
+  position: relative;
+  width: 14%;
+  height: 1.4rem;
+  border-radius: 1rem;
+  background-color: var(--marine-blue);
+}
+
+.slider > span {
+  display: flex;
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+
+/* FOOTER */
+.plan_footer {
+  padding: 5%;
+  width: 100%;
+  height: 4rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  border: 2px solid var(--light-gray);
+}
+
+.plan_previous {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0.6rem;
+}
+
+.plan_previous > a {
+  font-family: Poppins;
+  color: var(--cool-gray);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.plan_next {
+  padding: 0.5rem 1rem;
+  background-color: var(--marine-blue);
+  border: 0;
+  border-radius: 0.6rem;
+}
+
+.plan_next > a {
+  font-family: Poppins;
+  color: var(--white);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+/* HOVER */
+@media (hover: hover) {
+  .plan > label:hover {
+    background-color: var(--alabaster);
+    border: 2px solid var(--pastel-blue);
+    cursor: pointer;
+  }
+
+  .slider:hover {
+    cursor: pointer;
+  }
+
+  .plan_previous > a:hover {
+    color: var(--pastel-purple);
+    cursor: pointer;
+  }
+
+  .plan_next:hover {
+    background-color: var(--pastel-purple);
+    cursor: pointer;
+  }
+}

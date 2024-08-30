@@ -1,0 +1,59 @@
+/* FONTS */
+@font-face {
+  font-family: Poppins;
+  src: url(../assets/Poppins.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url(../assets/Raleway.ttf) format(truetype);
+}
+
+/* GLOBALS */
+:root {
+  --marine-blue: rgb(43, 71, 104);
+  --purplish-blue: rgb(71, 61, 255);
+  --pastel-blue: rgb(173, 190, 255);
+  --light-blue: rgb(191, 226, 253);
+  --strawberry-red: rgb(237, 53, 72);
+  --pastel-purple: rgb(147, 140, 252);
+
+  --cool-gray: rgb(150, 153, 171);
+  --light-gray: rgb(214, 217, 230);
+  --magnolia: rgb(240, 246, 255);
+  --alabaster: rgb(247, 249, 255);
+  --white: rgb(255, 255, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--magnolia);
+}
+
+.app {
+  font-family: Poppins;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1100px;
+  overflow: hidden;
+}
+
+.header_img {
+  width: 100vw;
+  height: 210px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../../public/images/bg-sidebar-mobile.svg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
