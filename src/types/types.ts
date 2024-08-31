@@ -24,6 +24,13 @@ export const IDefaultPlan = {
   year: 0,
 };
 
+export interface IAddon {
+  title: string;
+  desc: string;
+  month: number;
+  year: number;
+}
+
 export interface FormContextType {
   personalData: IForm;
   setPersonalData: (personalData: IForm) => void;
@@ -31,4 +38,6 @@ export interface FormContextType {
   setPlanData: (planData: IPlan) => void;
   billing: string;
   setBilling: (billing: string) => void;
+  addonData: IAddon[];
+  setAddonData: (addonData: IAddon[]) => void;
 }

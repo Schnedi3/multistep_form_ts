@@ -6,6 +6,7 @@ import {
   IFormDefault,
   IPlan,
   IDefaultPlan,
+  IAddon,
 } from "../types/types";
 
 export const FormContext = createContext<FormContextType | undefined>(
@@ -18,6 +19,8 @@ export const FormProvider = ({ children }: PropsWithChildren) => {
   const [planData, setPlanData] = useState<IPlan>(IDefaultPlan);
   const [billing, setBilling] = useState<string>("Monthly");
 
+  const [addonData, setAddonData] = useState<IAddon[]>([]);
+
   return (
     <FormContext.Provider
       value={{
@@ -27,6 +30,8 @@ export const FormProvider = ({ children }: PropsWithChildren) => {
         setPlanData,
         billing,
         setBilling,
+        addonData,
+        setAddonData,
       }}
     >
       {children}

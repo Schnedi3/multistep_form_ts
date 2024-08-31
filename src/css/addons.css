@@ -6,11 +6,11 @@
   gap: 0.7rem;
 }
 
-.addon > input[type="radio"] {
+.addon > input[type="checkbox"] {
   display: none;
 }
 
-.addon > label {
+.addon_details {
   padding: 0.9rem 1rem;
   display: flex;
   align-items: center;
@@ -21,22 +21,22 @@
   border-radius: 0.5rem;
 }
 
-.addon > input[type="radio"]:checked ~ label {
+.addon > input[type="checkbox"]:checked ~ .addon_details {
   background-color: var(--magnolia);
   border: 2px solid var(--pastel-purple);
 }
 
-.addon_details > h4 {
+.addon_details > div > h4 {
   font-weight: 600;
   font-size: 1.1rem;
   color: var(--marine-blue);
 }
 
-.addon_details > p {
+.addon_details > div > p {
   color: var(--cool-gray);
 }
 
-.addon > label > h3 {
+.addon_details > h3 {
   font-weight: 600;
   font-size: 0.9rem;
   color: var(--pastel-purple);
@@ -88,7 +88,7 @@
 
 /* HOVER */
 @media (hover: hover) {
-  .addon > label:hover {
+  .addon_details:hover {
     background-color: var(--alabaster);
     border: 2px solid var(--pastel-blue);
     cursor: pointer;
