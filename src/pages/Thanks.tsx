@@ -1,14 +1,22 @@
+import { NavLink } from "react-router-dom";
+
 import { thanks } from "../data";
 import "../css/thanks.css";
 
 export const Thanks = () => {
   return (
-    <section className="thanks_container">
-      <div className="thanks_title">
+    <section className="card_container">
+      <article className="thanks_info">
         <img src={thanks.image} alt="thanks image" />
-        <h1>{thanks.title}</h1>
+        <h2>{thanks.title}</h2>
         <p>{thanks.desc}</p>
-      </div>
+      </article>
+
+      <footer className="footer footer_right">
+        <button className="footer_next">
+          <NavLink to="/">Go to start</NavLink>
+        </button>
+      </footer>
     </section>
   );
 };

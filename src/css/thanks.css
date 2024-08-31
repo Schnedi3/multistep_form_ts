@@ -1,28 +1,27 @@
 /* THANKS */
-.thanks_container {
-  margin-top: 8rem;
-  padding: 5rem 2rem;
-  background-color: var(--white);
-  border-radius: 0.6rem;
-  border: 2px solid var(--light-gray);
-}
-
-.thanks_title > img {
+.thanks_info {
   display: flex;
-  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-.thanks_title > h1 {
-  font-size: 2rem;
-  color: var(--marine-blue);
-  text-align: center;
-  margin-top: 2rem;
+.thanks_info > img {
+  width: 7rem;
   margin-bottom: 1rem;
 }
 
-.thanks_title > p {
+.thanks_info > h2 {
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 2.3rem;
+  color: var(--marine-blue);
+}
+
+.thanks_info > p {
   font-size: 1.1rem;
   color: var(--cool-gray);
-  text-align: center;
   text-wrap: balance;
+  text-align: center;
 }

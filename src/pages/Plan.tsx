@@ -5,6 +5,7 @@ import { IPlan } from "../types/types";
 import { useFormContext } from "../context/useFormContext";
 
 import "../css/plan.css";
+import "../css/common.css";
 
 export const Plan = () => {
   const { planData, setPlanData, billing, setBilling } = useFormContext();
@@ -18,16 +19,16 @@ export const Plan = () => {
   };
 
   return (
-    <>
-      <section className="card_container">
+    <section className="card_container">
+      <form className="plan_form">
         <div className="title">
           <h2>{plan.title}</h2>
           <p>{plan.desc}</p>
         </div>
 
-        <form className="plan_form">
+        <article className="cards">
           {plans.map((plan) => (
-            <article
+            <div
               className={`plan${
                 planData.title === plan.title ? " checked" : ""
               }`}
@@ -52,9 +53,9 @@ export const Plan = () => {
                     : plan.month + "/mo"}
                 </p>
               </label>
-            </article>
+            </div>
           ))}
-        </form>
+        </article>
 
         <div
           className={`billing${billing === "Yearly" ? " yearly" : " monthly"}`}
@@ -75,17 +76,20 @@ export const Plan = () => {
           </label>
           <p>Yearly</p>
         </div>
-      </section>
+      </form>
 
-      <footer className="plan_footer">
-        <button className="plan_previous">
+      <footer className="footer">
+        <button className="footer_previous">
           <NavLink to="/">Go Back</NavLink>
         </button>
-
-        <button className="plan_next">
+        <button
+          className={`footer_next${
+            planData.title === "" ? " footer_disabled" : ""
+          }`}
+        >
           <NavLink to="/addons">Next Step</NavLink>
         </button>
       </footer>
-    </>
+    </section>
   );
 };

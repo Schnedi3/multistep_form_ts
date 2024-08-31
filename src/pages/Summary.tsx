@@ -16,40 +16,38 @@ export const Summary = () => {
   const totalCost = planCost + addonsCost;
 
   return (
-    <>
-      <section className="card_container">
-        <article className="title">
-          <h1>{summary.title}</h1>
-          <p>{summary.desc}</p>
-        </article>
+    <section className="summary_container">
+      <article className="title">
+        <h2>{summary.title}</h2>
+        <p>{summary.desc}</p>
+      </article>
 
-        <article className="summary">
-          <div className="summary_plan">
-            <div>
-              <h4>
-                {planData.title} ({billing})
-              </h4>
-              <NavLink to="/plan">Change</NavLink>
-            </div>
-            <h3>${billing === "Yearly" ? planData.year : planData.month}</h3>
+      <article className="summary">
+        <div className="summary_plan">
+          <div>
+            <h4>
+              {planData.title} ({billing})
+            </h4>
+            <NavLink to="/plan">Change</NavLink>
           </div>
+          <h3>${billing === "Yearly" ? planData.year : planData.month}</h3>
+        </div>
 
-          {addonData.map((addon) => (
-            <div className="summary_addon">
-              <p>{addon.title}</p>
-              <h3>+${billing === "Yearly" ? addon.year : addon.month}</h3>
-            </div>
-          ))}
-        </article>
+        {addonData.map((addon) => (
+          <div className="summary_addon">
+            <p>{addon.title}</p>
+            <h3>+${billing === "Yearly" ? addon.year : addon.month}</h3>
+          </div>
+        ))}
+      </article>
 
-        <article className="total">
-          <p>Total ({billing === "Yearly" ? "per year" : "per month"})</p>
-          <h3>
-            ${totalCost}
-            {billing === "Yearly" ? "/yr" : "/mo"}
-          </h3>
-        </article>
-      </section>
+      <article className="total">
+        <p>Total ({billing === "Yearly" ? "per year" : "per month"})</p>
+        <h3>
+          ${totalCost}
+          {billing === "Yearly" ? "/yr" : "/mo"}
+        </h3>
+      </article>
 
       <footer className="footer">
         <button className="footer_previous">
@@ -60,6 +58,6 @@ export const Summary = () => {
           <NavLink to="/thanks">Confirm</NavLink>
         </button>
       </footer>
-    </>
+    </section>
   );
 };

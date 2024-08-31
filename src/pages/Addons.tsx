@@ -17,38 +17,36 @@ export const Addons = () => {
   };
 
   return (
-    <>
-      <section className="card_container">
+    <section className="card_container">
+      <form className="addon_form">
         <div className="title">
           <h2>{addon.title}</h2>
           <p>{addon.desc}</p>
         </div>
 
-        <form className="addon_form">
-          {addons.map((addon) => (
-            <article className="addon" key={addon.title}>
-              <input
-                type="checkbox"
-                id={addon.title}
-                checked={addonData.some((item) => item.title === addon.title)}
-                onChange={(e) => handleSetAddon(addon, e.target.checked)}
-              />
-              <label htmlFor={addon.title} className="addon_details">
-                <div>
-                  <h4>{addon.title}</h4>
-                  <p>{addon.desc}</p>
-                </div>
-                <h3>
-                  +$
-                  {billing === "Yearly"
-                    ? addon.year + "/yr"
-                    : addon.month + "/mo"}
-                </h3>
-              </label>
-            </article>
-          ))}
-        </form>
-      </section>
+        {addons.map((addon) => (
+          <article className="addon" key={addon.title}>
+            <input
+              type="checkbox"
+              id={addon.title}
+              checked={addonData.some((item) => item.title === addon.title)}
+              onChange={(e) => handleSetAddon(addon, e.target.checked)}
+            />
+            <label htmlFor={addon.title} className="addon_details">
+              <div>
+                <h4>{addon.title}</h4>
+                <p>{addon.desc}</p>
+              </div>
+              <h3>
+                +$
+                {billing === "Yearly"
+                  ? addon.year + "/yr"
+                  : addon.month + "/mo"}
+              </h3>
+            </label>
+          </article>
+        ))}
+      </form>
 
       <footer className="footer">
         <button className="footer_previous">
@@ -63,6 +61,6 @@ export const Addons = () => {
           <NavLink to="/summary">Next Step</NavLink>
         </button>
       </footer>
-    </>
+    </section>
   );
 };

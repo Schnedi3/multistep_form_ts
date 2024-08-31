@@ -42,65 +42,11 @@
   color: var(--pastel-purple);
 }
 
-/* FOOTER */
-.addon_footer {
-  padding: 5%;
-  width: 100%;
-  height: 4rem;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--white);
-  border: 2px solid var(--light-gray);
-}
-
-.addon_previous {
-  padding: 0.5rem 1rem;
-  background-color: transparent;
-  border: 0;
-  border-radius: 0.6rem;
-}
-
-.addon_previous > a {
-  font-family: Poppins;
-  color: var(--cool-gray);
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-}
-
-.addon_next {
-  padding: 0.5rem 1rem;
-  background-color: var(--marine-blue);
-  border: 0;
-  border-radius: 0.6rem;
-}
-
-.addon_next > a {
-  font-family: Poppins;
-  color: var(--white);
-  font-size: 1rem;
-  text-decoration: none;
-}
-
 /* HOVER */
 @media (hover: hover) {
   .addon_details:hover {
     background-color: var(--alabaster);
     border: 2px solid var(--pastel-blue);
-    cursor: pointer;
-  }
-
-  .addon_previous > a:hover {
-    color: var(--pastel-purple);
-    cursor: pointer;
-  }
-
-  .addon_next:hover {
-    background-color: var(--pastel-purple);
     cursor: pointer;
   }
 }

@@ -21,7 +21,7 @@ export const summary = {
 export const thanks = {
   image: "./images/icon-thank-you.svg",
   title: "Thank you!",
-  desc: "Thanks fro confirming your subcription! We hope you have fun using out platform. If you ever need support, please feel free to email us at support@loremgaming.com",
+  desc: "Thanks for confirming your subcription! We hope you have fun using out platform. If you ever need support, please feel free to email us at: support@loremgaming.com",
 };
 
 export const plans = [
