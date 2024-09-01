@@ -13,8 +13,8 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
   - A step is submitted, but no selection has been made
 
 ## Screenshots
-<!-- <img src="./screenshots/desktop-design.jpg">
-<img src="./screenshots/mobile-design.jpg"> -->
+<img src="./screenshots/desktop_design.png">
+<img src="./screenshots/mobile_design.png">
 
 ## Built with
 - React
