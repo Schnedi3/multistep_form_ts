@@ -127,3 +127,24 @@ input:checked + .slider:before {
     cursor: pointer;
   }
 }
+
+/* MOBILE */
+@media (max-width: 800px) {
+  .cards {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+
+  .plan > label {
+    padding: 0.9rem 1rem;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .plan > label > p {
+    margin-left: auto;
+  }
+}

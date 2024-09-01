@@ -25,3 +25,22 @@
   text-wrap: balance;
   text-align: center;
 }
+
+/* MOBILE */
+@media (max-width: 800px) {
+  .thanks_container {
+    padding: 5rem 2rem;
+  }
+
+  .thanks_info > img {
+    width: 5rem;
+  }
+
+  .thanks_info > h2 {
+    font-size: 1.9rem;
+  }
+
+  .thanks_info > p {
+    font-size: 1rem;
+  }
+}

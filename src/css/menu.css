@@ -55,3 +55,27 @@
   background-color: var(--light-blue);
   border: 0;
 }
+
+/* MOBILE */
+@media (max-width: 800px) {
+  .menu {
+    width: 100%;
+    top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    left: 0;
+  }
+
+  .menu_links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .menu_links > li > div > p,
+  .menu_links > li > div > h3 {
+    display: none;
+  }
+}

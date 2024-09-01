@@ -84,3 +84,10 @@
     text-decoration: underline;
   }
 }
+
+/* MOBILE */
+@media (max-width: 800px) {
+  .summary_container {
+    padding: 2rem;
+  }
+}

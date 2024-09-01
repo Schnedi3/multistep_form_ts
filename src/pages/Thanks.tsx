@@ -5,7 +5,7 @@ import "../css/thanks.css";
 
 export const Thanks = () => {
   return (
-    <section className="card_container">
+    <section className="card_container thanks_container">
       <article className="thanks_info">
         <img src={thanks.image} alt="thanks image" />
         <h2>{thanks.title}</h2>
