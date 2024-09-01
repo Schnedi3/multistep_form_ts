@@ -40,4 +40,5 @@ export interface FormContextType {
   setBilling: (billing: string) => void;
   addonData: IAddon[];
   setAddonData: (addonData: IAddon[]) => void;
+  handleCleanForm: () => void;
 }

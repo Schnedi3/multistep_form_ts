@@ -21,6 +21,13 @@ export const FormProvider = ({ children }: PropsWithChildren) => {
 
   const [addonData, setAddonData] = useState<IAddon[]>([]);
 
+  const handleCleanForm = () => {
+    setPersonalData(IFormDefault);
+    setPlanData(IDefaultPlan);
+    setBilling("Monthly");
+    setAddonData([]);
+  };
+
   return (
     <FormContext.Provider
       value={{
@@ -32,6 +39,7 @@ export const FormProvider = ({ children }: PropsWithChildren) => {
         setBilling,
         addonData,
         setAddonData,
+        handleCleanForm,
       }}
     >
       {children}

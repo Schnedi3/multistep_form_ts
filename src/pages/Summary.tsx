@@ -7,7 +7,7 @@ import "../css/summary.css";
 import "../css/common.css";
 
 export const Summary = () => {
-  const { planData, addonData, billing } = useFormContext();
+  const { planData, addonData, billing, handleCleanForm } = useFormContext();
 
   const planCost = billing === "Yearly" ? planData.year : planData.month;
   const addonsCost = addonData.reduce((total, addon) => {
@@ -54,7 +54,7 @@ export const Summary = () => {
           <NavLink to="/addons">Go Back</NavLink>
         </button>
 
-        <button className="footer_next">
+        <button className="footer_next" onClick={handleCleanForm}>
           <NavLink to="/thanks">Confirm</NavLink>
         </button>
       </footer>
